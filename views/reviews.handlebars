@@ -1,0 +1,36 @@
+
+
+<div class="container-fluid ml-4">
+  {{!-- <h3>Add reviews</h3><br> --}}
+  <form class="create-form" id="review" name="review" method="post" action="/api/reviews">
+    <div class="form-group">
+      <label for="trip">Trip Name:</label><br>
+      <lable for="destination">Destination:</lable>
+    </div>
+    <div class="form-group">
+      <label for="category">Category</label>
+      <input type="text" id="category" name="titleCategory"><br>
+      <div class="form-group">
+        <label for="rating">Rating(1-worst to 5-Best)</label>
+        <select class="form-control" id="rating">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="review">Review:</span>
+          </div>
+          <textarea class="form-control" id="review-input" aria-label="review"></textarea>
+      </div><br>
+      <div class="form-group">
+        <span id="message"></span>
+        <a class="btn btn-light" href="/api/review" id="save-review-btn">Save review</a>
+        <a class="btn btn-light" href="/reviews" id="save-add-btn">add another review</a>
+      </div>
+  </form>
+</div>
+<script src="/js/reviews.js"></script>

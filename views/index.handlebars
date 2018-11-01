@@ -1,0 +1,31 @@
+  <h2 class="text-center ">Recent Reviews</h2>
+  <div class="row">
+    {{#each reviews}}  
+    <div class="col-6">
+  
+      <div class="card">
+        <div class="card-header bg-success text-light">
+          <h5 class="mb-0">
+              {{Destination.destinationCity}}, {{Destination.destinationCountry}}
+          </h5>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-6">
+              <h6>Category: {{titleCategory}}</h6>
+            </div>
+        
+            <div class="col-6 text-right">
+              <h6>Rating: {{rating}}</h6>
+            </div>
+          </div>
+          
+          <hr>
+          <p>{{review}}</p>
+        </div>
+        
+      </div>
+    </div>
+  {{/each}} 
+</div>
+

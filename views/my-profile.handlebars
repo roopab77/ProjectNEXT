@@ -1,0 +1,58 @@
+<table class="table table-light table-condensed " id="myTable">
+  <thead>
+    <tr>
+      <th scope="col">Trip Name</th>
+      <th scope="col">From </th>
+      <th scope="col">To</th>
+      <th scope="col">Email</th>
+    </tr>
+  </thead>
+  <tbody class="panel">
+    {{#each trips}}
+    <tr class="trip-data">
+      <th><button type="button" class="btn btn-comm get-destinations-all" value={{id}}><i class="fa fa-comments pr-1"></i>
+          {{tripName}}</button></th>
+      <td>{{tripStartDate}}</td>
+      <td>{{tripEndDate}}</td>
+      <td><div class="input-group mb-3">
+  <input type="text" class="form-control to-email-id" placeholder="Recipient's Email" aria-label="Recipient's Email" aria-describedby="basic-addon2">
+  <div class="input-group-append">
+    <button class="btn btn-outline-secondary btn-send-email" value={{id}} type="button">Send</button>
+  </div>
+</div>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+<div class="col" id="destinations-table" style="width:100%;margin:0px"></div>
+
+
+
+<div class="row mt-5" id="my-reviews">
+  <div class="col-12">
+
+    <div class="card  ">
+      <div class="card-header ">
+        <h2>My Reviews</h2>
+      </div>
+      <div class="row">
+            {{#each reviews}}
+      <div class="col-3 card-body">
+      <ul >
+    
+        <li>
+          <h5>{{Destination.destinationCity}}, {{Destination.destinationCountry}}</h5>
+          <hr>
+          <h6>Category: {{titleCategory}} </h6>
+          <p>{{review}}</p> 
+          <h6>Rating: {{rating}}</h6>
+        </li>
+      
+
+      </ul></div>  {{/each}}
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,59 @@
+<div class="row">
+  <div class="col-7">
+    <div class="card bg-light mb-3" id="add-destination">
+
+      <div class="card-header">
+        <h4>Add a destination for your Upcoming Trip</h4>
+      </div>
+     
+
+        <div  style="margin:10px">
+          <h6>Trip : {{trip_name_from_trips}}</h6>
+        </div>
+        <div  style="margin:10px">
+          <h6>From : {{tripStart_from_trips}} To : {{tripEnd_from_trips}}</h6>
+        </div>
+
+      
+      <h2 id="trip-id" style="display:none">{{trip_id_from_trips}}</h2>
+      <div class="card-body" id="input-destination">
+        <h5 class="card-title" id="trip-name"></h5>
+        <div class="form-group">
+          <label for="category">From</label>
+          <input type="Date" id="dateFrom" name="fromDate"></div>
+        <div class="form-group"><label for="category">To</label>
+          <input type="Date" id="dateTo" name="toDate"></div>
+
+        <div class="form-group">
+          <label>Select Country</label>
+          <select class="custom-select" id="countries" style="width:200px" onchange="getStates(this.options[this.selectedIndex].value)">
+
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Select State</label>
+          <select class="custom-select" id="states" style="width:200px" onchange="getCities(this.options[this.selectedIndex].value)">
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="category">Select City</label>
+          <select class="custom-select" id="cities" style="width:200px">
+          </select>
+        </div>
+        <button type="button" class="btn btn-success btn-lg   ml-4" id="btn-add-destination">Add Destination</button>
+        <a type="button" class="btn btn-success btn-lg   ml-4 " href="/my-profile" id="done-adding">View your Trips</a>
+      </div>
+
+    </div>
+  </div>
+  <div class="col-5">
+    <div class="card"  id="added-destinations" style="display:none">
+    <div class="card-header">
+      <h2>Added Destinations</h2></div>
+      <div class="card-body">
+        <ul id="destinations-ul"></ul>
+      </div>
+    </div></div>
+  </div>
+</div>
+</div>

@@ -1,0 +1,42 @@
+<div class="card bg-light mb-3" style="">
+  <div id="add-trip">
+
+    <div class="card-body">
+      <div class="row" style="margin:10px">
+        <div class="col-2"><label for="trip">Trip Name:</label></div>
+        <div class="col-10"><input type="text" id="tripName" name="tripName" style="width:250px"></div>
+      </div>
+      <div class="row" style="margin:10px">
+        <div class="col-2"><label for="trip">Trip Start Date:</label></div>
+        <div class="col-10"><input type="Date" id="tripStartDate" name="tripStartDate"></div>
+      </div>
+      <div class="row" style="margin:10px">
+        <div class="col-2"><label for="ca">Trip End Date:</label></div>
+        <div class="col-10"><input type="Date" id="tripEndDate" name="tripEndDate"></div>
+      </div>
+      <div class="row" style="margin:20px">
+      
+   <a class="btn btn-success btn-lg " href="/api/trips" id="save-trip-btn">Save trip</a></div>
+    </div>
+   
+  </div>
+  <div class="card" id="trip-data" style="display: none">
+    <div class="card-header">
+      <h5 class="card-title">
+        <div class="row">
+          <div class="col"><span id="trip_name"></span></div>
+          <div class="col">
+            <p class="card-text">From : <span id="from_date"></p>
+          </div>
+          <div class="col">
+            <p class="card-text">To : <span id="to_date"></p>
+          </div>
+        </div>
+      </h5>
+    </div>
+    <div class="card-body">
+      <p>Do you want to add destinations to your trip?</p>
+      <a class="btn btn-success btn-lg " id="add-destination-btn" href="">Add destinations</a>
+    </div>
+  </div>
+</div>
