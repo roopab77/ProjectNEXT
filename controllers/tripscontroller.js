@@ -4,7 +4,7 @@ nodeMailer = require("nodemailer");
 var htmlToText = require('nodemailer-html-to-text').htmlToText;
 
 
-const Op = require('Sequelize').Op;
+const Op = require('sequelize').Op;
 
 var ensureLoggedIn = require("connect-ensure-login").ensureLoggedIn;
 module.exports = function (app, passport) {
