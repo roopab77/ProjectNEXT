@@ -19,7 +19,7 @@
     "nodemailer-html-to-text": "^3.0.0",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
-    "Sequelize": "^4.41.0",
+    "sequelize": "^4.41.0",
     "sql": "^0.78.0"
   },
   "devDependencies": {},
